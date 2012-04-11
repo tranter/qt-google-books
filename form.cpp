@@ -18,10 +18,10 @@ Form::Form(QWidget *parent) :
 
     m_pOAuth2 = new OAuth2(this);
     m_pOAuth2->setScope("https://www.googleapis.com/auth/books");
-    m_pOAuth2->setClientID("476807742904-1e2qesck2a151t6envel2756heus7ddt.apps.googleusercontent.com");
-    m_pOAuth2->setRedirectURI("http://www.ics.com/oauth2callback");
-    m_pOAuth2->setCompanyName("ICS");
-    m_pOAuth2->setAppName("Google API Books Client");
+    m_pOAuth2->setClientID("YOUR_CLIENT_ID_HERE");
+    m_pOAuth2->setRedirectURI("YOUR_REDIRECT_URI_HERE");
+    m_pOAuth2->setCompanyName("YOUR_COMPANY_NAME_HERE");
+    m_pOAuth2->setAppName("QtBooks");
 
     connect(m_pOAuth2, SIGNAL(loginDone()), this, SLOT(loginDone()));
 
