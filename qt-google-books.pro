@@ -18,10 +18,10 @@ LIBS += ../qjson/build/lib/libqjson.so -L../qt-oauth-lib -l qt-oauth-lib
 win* {
     LIBS += ../qjson/build/lib/qjson0.dll
     debug {
-        LIBS += -L../google_api_oauth2_lib/debug -l qt-oauth-lib
+        LIBS += -L../qt-oauth-lib/debug -l qt-oauth-lib
     }
     release {
-        LIBS += -L../google_api_oauth2_lib/release -l qt-oauth-lib
+        LIBS += -L../qt-oauth-lib/release -l qt-oauth-lib
     }
 }
 
