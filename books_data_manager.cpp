@@ -96,7 +96,9 @@ void BooksDataManager::clearVolumesFromMyLibrary(const QString& access_token, in
 
     QNetworkRequest request;
     request.setUrl(QUrl(s));
-    //request.setRawHeader("Content-Type", "application/json");
+//#if QT_VERSION >= 0x040800
+    request.setRawHeader("Content-Type", "application/json");
+//#endif
 
     QApplication::setOverrideCursor(Qt::WaitCursor);
     m_pNetworkAccessManager->post(request, params);
